@@ -31,7 +31,9 @@ class SignIn extends Component {
                     <input style={{marginRight: '5px'}} onChange={event => this.setState({password: event.target.value})} className="form-control" type="password" placeholder="password" />
                     <button onClick={() => this.signIn()} className="btn btn-primary" type="button">Sign In</button>
                 </div>
-                <div>{this.state.error.message}</div>
+                <div>
+                    {this.state.error.message}
+                </div>
                 <div><Link to={'/signup'}>sign up instead</Link></div>
             </div>
         );
