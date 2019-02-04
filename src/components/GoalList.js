@@ -11,7 +11,7 @@ class GoalList extends Component {
             snap.forEach( goal => {
                 const { email, title } = goal.val();
                 const serverKey = goal.key;
-                goals.push(email, title, serverKey);
+                goals.push({email, title, serverKey});
             });
             console.log('test firebase','goals', goals);
             this.props.setGoals(goals);

@@ -5,7 +5,7 @@ import { completeGoalRef, goalRef } from "../firebase";
 class GoalItem extends Component {
     completeGoal(){
     //add complete goal to the database
-        const { email } = this.props.user;
+        const { email } = this.props.user.email;
         const { title, serverKey } = this.props.goal;
         goalRef.child(serverKey).remove();
         completeGoalRef.push({email, title});
@@ -15,8 +15,8 @@ class GoalItem extends Component {
         const {email, title} = this.props.goal;
         return (
             <div style={{margin: '5px'}} className="Goal-item">
-               <strong>{title}</strong>
-                <span style={{marginRight: '5px'}}>submitted by <em>{email}</em></span>
+               <strong>{ title }</strong>
+                <span style={{marginRight: '5px'}}> submitted by <em>{ email }</em></span>
                 <button className="btn btn-small btn-primary" onClick={() => this.completeGoal()}>Complete</button>
             </div>
         )
