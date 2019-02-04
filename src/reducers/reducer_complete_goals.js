@@ -1,4 +1,4 @@
-import { SET_COMPLETETD } from "../constants";
+import { SET_COMPLETED } from "../constants";
 
 export default (state =[], action) => {
     switch (action.type) {
