@@ -32,7 +32,7 @@ class CompleteGoalList extends Component {
                         )
                     })
                 }
-                <button className="btn btn-primary" onClick={(this.clearCompleted())}>
+                <button className="btn btn-primary" onClick={() => this.clearCompleted()}>
                     Clear All
                 </button>
             </div>
